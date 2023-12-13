@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <style>
+        /* Create a Nav bar of different colors using variables function. */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        :root{
+            --color:rgb(89, 255, 0);
+            --seccolor:rgb(0, 30, 255);
+            --tircolor:rgb(162, 255, 138);
+            --quadcolor:rgb(89, 255, 95);
+            --pentcolor:rgb(102, 255, 97);
+
+        }
+        body{
+            background-color: var(--pentcolor);
+        }
+        h1{
+            color: var(--seccolor);
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .nav ul{
+            background-color: var(--color);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        ul li{
+            padding: 12px;
+            border: 2px solid var(--tircolor);
+        }
+        .cont{
+            background-color: var(--pentcolor);
+        }
+        ul li a{
+            text-decoration: none;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        My Website
+    </h1>
+    <span class="nav">
+        <ul>
+            <li><a href="https://www.youtube.com/" target="_blank">Home</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">Menu</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">Help</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">Contact Us</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">About</a></li>
+        </ul>
+    </span>
+    <div class="cont">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis hic error, quisquam perspiciatis a molestias provident quam veritatis amet, voluptatem, repudiandae iure!
+    </div>
+    
+</body>
+</html>

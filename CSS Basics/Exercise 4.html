@@ -1,0 +1,141 @@
+<!-- Make the layout of the website as in the image. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        :root{
+            --text_color:white;
+            --nav_color:hotpink;
+            --website_theme:pink;
+            --box1_color:cyan;
+            --box2_color:orange;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .nav{
+            position: sticky;
+            top: 0;
+        }
+        .nav nav ul{
+            background-color: var(--nav_color);
+            font-family: 'Poppins', sans-serif;
+            font-weight: bolder;
+        }
+       ul{
+        list-style: none;
+        display: flex;
+        
+       } 
+       ul li{
+        padding: 23px;
+        border: 2px solid var(--website_theme);
+       }
+       ul li a{
+        text-decoration: none;
+        color: var(--text_color);
+       }
+       .background{
+        height: 700px;
+        margin: 10px;
+        padding: 5px;
+        background-color: var(--website_theme);
+        display: flex;
+        justify-content: center;
+       }
+       .box1{
+        height: 500px;
+        width: 500px;
+        margin: 25px;
+        background-color: var(--box1_color);
+       }
+       .box2{
+        height: 500px;
+        width: 500px;
+        margin: 25px;
+        background-color: var(--box2_color);
+       }
+       .box2 img{
+        border-radius: 15px;
+        padding: 5px;
+       }
+       .cont{
+        margin: 70px;
+        padding: 15px;
+        border: 2px solid black;
+        border-radius: 25px;
+        border: none;
+        outline: 2px solid black;
+        outline-offset: 8px;
+        outline-width: 5px;
+        display: flex;
+        justify-content: center;
+        font-size:xxx-large;
+        font-weight: bolder;
+       }
+       .img{
+        display: flex;
+        justify-content: right;
+        position: fixed;
+        top: 600px;
+        right: 0;
+       }
+       .img a img{
+        border-radius: 1000px;
+       }
+       .footer{
+        height: 50px;
+        background-color: grey;
+       }
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="https://www.youtube.com/" target="_blank">Home</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank">Services</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank">Help</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank">Contact Us</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="background">
+        <div class="box1">
+            <h1>
+                Shreya Jain
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ea repellat libero sed quam molestiae nisi. Ullam vel eveniet culpa nihil, dolorum voluptate laborum, voluptas molestias magni enim, esse earum unde. Nisi dolor eos quo ipsum nihil sequi quisquam obcaecati neque impedit! Commodi consequuntur quidem vero exercitationem provident placeat dolorum possimus modi odit cumque saepe, quasi ipsam voluptates aliquid explicabo at! Blanditiis aspernatur, in earum error dolorum necessitatibus dolores impedit natus distinctio, ex odit assumenda voluptatum repellendus et, maiores amet. Unde sequi voluptatibus adipisci recusandae, culpa hic deleniti sed mollitia fugit amet fugiat atque explicabo necessitatibus commodi qui rem neque. Animi cupiditate molestias, cumque velit autem natus doloremque veritatis. Voluptatibus eligendi maxime magni dicta iusto ab soluta vitae voluptatum minima velit tenetur explicabo deleniti quo accusamus perferendis, rem quia eum excepturi deserunt molestias ea eaque! Obcaecati consequuntur, harum aliquid sunt temporibus, rem molestiae tempora quaerat vero consequatur hic repellat? Vel?
+            </p>
+        </div>
+        <div class="box2">
+            <img width="400px" src="free-images.avif" alt="">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorum cumque illum sunt nesciunt debitis, soluta dicta at! Ex repudiandae adipisci ducimus libero labore eligendi, accusantium natus error delectus itaque deserunt officiis eius perspiciatis vero nemo commodi enim doloremque dicta aperiam in alias inventore quasi.
+            </p>
+        </div>
+    </div>
+    <div class="img">
+        <a href="https://www.youtube.com/" target="_blank"><img width="50px" src="download.png" alt=""></a>
+    </div>
+    <div class="cont">
+        Welcome to this Sigma Web Development Express 
+    </div>
+    <div class="footer">
+        &copy; Published By Bhavya Jain.
+    </div>
+    
+
+</body>
+
+</html>

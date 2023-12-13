@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            /*Root element*/
+            font-size: 12px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /*1 width: 1355px;*/
+            width: 80vw;
+            /*2 Viewport Width*/
+            height: 10vh;
+            margin: auto;
+            /*Uses only in Block level element*/
+            background-color: aquamarine;
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /*1 width: 1355px;*/
+            width: 80vw;
+            /*2 Viewport Width*/
+            height: 80vh;
+            /*3 Veiwport Height*/
+            margin: 23px auto;
+            /*Uses only in Block level element*/
+            font-size: 18px;
+            /*4 em (Changes size of parent font size.Incase no parent value it will take default Value. )*/
+            background-color: aquamarine;
+            /* 5 rem same but uses html root as parent font size.Default is 12px. */
+        }
+
+        .container p {
+            font-size: 2em;
+            width: 50%;
+            /* Parent width ka 50%. */
+        }
+
+        .mycont {
+            border: 2px solid red;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: yellow;
+            font-size: 23px;
+            width: 80vw;
+            /*5 In this laptop vmin is vh as height of laptop is less as compared to width.It's opposite is vmax. So in phone vmin is vw and vmax is vh.  */
+            min-height: 80vh;
+            /* Min height is that required height even if info is less.If more than that then it is adjusted. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a Box.
+    </div>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati tenetur necessitatibus eos.
+        </p>
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae velit dolore veritatis aut impedit
+            delectus fuga placeat illo, odio, doloribus sint alias beatae accusamus ducimus libero? Culpa vel eum in
+            libero
+            nostrum qui error deleniti ab facere voluptatum, id dicta doloribus veniam repellat repellendus vero
+            temporibus
+            recusandae reiciendis. Debitis, deserunt accusantium! Repudiandae nemo officia ab quae!
+        </div>
+    </div>
+    <div class="mycont">
+        I am another container. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda deserunt, earum
+        iure, dolorum eum tenetur nulla illum, deleniti corrupti molestias debitis porro fuga.
+    </div>
+</body>
+
+</html>

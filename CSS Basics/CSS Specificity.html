@@ -1,0 +1,71 @@
+<!-- The Cascade Algorithm -->
+<!-- CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple. -->
+
+<!-- Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages. -->
+
+<!-- Position and order of appearance: the order in which your CSS rules appear -->
+<!-- Specificity: an algorithm that determines which CSS selector has the strongest match
+Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector -->
+<!-- Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS -->
+<!-- Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type -->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Specificity Calculation -->
+    <!-- To calculate specificity, assign a value to each part of the selector: -->
+    <!-- Universal Selector: 0 -->
+    <!-- Element selectors and pseudo-elements: 1 -->
+    <!-- Class selectors, attribute selectors, and pseudo-classes: 10 -->
+    <!-- ID selectors: 100 -->
+    <!-- Inline styles: 1000 -->
+    <!-- !important: 10000 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* The specificity of this selector is 1  */
+        h1 {
+            color: aqua;
+        }
+
+        /* The specificity of this selector is 10 
+        But !important is used so it is 10000+10=10010 */
+        .cpurple {
+            color: purple !important;
+        }
+
+        /* The specificity of this selector is 1 + 10 = 11  */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* This is an example of attribute selector. The specificity of this selector is 10 */
+        [data-x=a] {
+            color: maroon;
+        }
+
+        /* The specificity of this selector is 10  */
+        .cred {
+            color: red;
+        }
+
+        /*If specificity clashes position of code matters*/
+        /* The specificity of this selector is ? */
+        a.harryclass.rohan-class[href]:hover {
+            color: burlywood;
+            /*This has highest Specificity*/
+            /* ans= 1+10+10+10+10=41 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+        <a class="harryclass.rohan-class"href="https://codewithharry.com/tutorial/css-specificity/">Check Notes</a>
+        <p class="cpurple cred">Hello Shreya</p>
+        
+    </div>
+</body>
+
+</html>

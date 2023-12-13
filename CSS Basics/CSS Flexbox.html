@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+            align-items: center; /*If one line is aligned it is align items and if more than one is content*/
+            flex-direction: column;
+            align-content: flex-start;
+            /* flex-direction: column-reverse; */
+            /* Inputs reverse Value. */
+            flex-wrap: wrap;
+            /* It wraps all contents by putting them down. */
+            flex-flow: row wrap;
+            gap: 30px; /*gap: row column gap*/
+            row-gap: 30px;
+            column-gap: 10px;
+
+        }
+        .item{
+            height: 32px;
+            width: 32px;
+            background-color: aqua;
+            margin: 4px;
+            border: 2px solid black;
+            flex-grow: 1;
+
+        }
+        .order-1{
+            order: 1;
+            /* align-self: flex-end; */
+            /* Aligns particular element. */
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        .order-4{
+            order: 4;
+        }
+        /* Jitna zyada order utni hi last mein value. */
+        .item1{
+            flex-grow: 3;
+            /* flex-shrink:shrinks flex to that much value */
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1 order-4">1</div>
+            <div class="item order-2">2</div>
+            <div class="item order-2">3</div>
+            <div class="item order-1">4</div>
+            <div class="item order-1">9</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            
+        </div>
+    </main>
+</body>
+</html>

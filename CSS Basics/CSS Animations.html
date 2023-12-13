@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container{
+            background-color: aqua;
+            width: 50vw;
+            height: 40vh;
+        }
+        .box{
+            background-color: blue;
+            width: 5vw;
+            height: 4vh;
+            animation: BJStudios,B2;
+            animation-duration: 3s ;
+            animation-iteration-count: 2;
+            animation-timing-function: cubic-bezier(0,-0.08, 0, 1.35);
+            animation-direction: alternate-reverse;
+            animation-play-state: paused;
+            animation-fill-mode: forwards;
+            /* It stops at the final result of animation. */
+
+            /* OR */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+        @keyframes BJStudios {
+            from{
+               background-color: red; 
+            }
+            to{
+                background-color: yellow;
+                transform: translateX(1000px);
+            }
+        }
+        @keyframes B2{
+            0%{
+                transform: rotate(60deg);
+            }
+            20%{
+                transform: rotate(120deg);
+            }
+            40%{
+                transform: rotate(180deg);
+            }
+            60%{
+                transform: rotate(240deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

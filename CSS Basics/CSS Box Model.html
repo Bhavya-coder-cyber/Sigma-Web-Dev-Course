@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxmodel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: aqua;
+        }
+
+        .box1 {
+            color: blue;
+            padding: 10px;
+            margin: 15px;
+            border: 5px solid black;
+            height: 200px;
+            box-sizing: border-box;
+            /* It adjusts the Size of Content + Padding + Border in this case it is 200px*/
+        }
+
+        .box2 {
+            color: blueviolet;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">I am a Box</div>
+    <div class="box box2">I am a Box 2</div>
+
+</body>
+
+</html>

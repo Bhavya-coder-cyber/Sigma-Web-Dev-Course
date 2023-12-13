@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid green;
+            display: inline; /*display all in inline element*/
+            display: inline-block; /*It hepls to put in a Block and also allows to set a width which is not possible in display inline.*/
+            padding: 45px;
+            margin: 34px;
+            width: 344px;
+
+        }
+        .box1{
+            /* display: none; Removes all display all shows nothing. */
+            /* visibility: hidden;Same as Display none but doesn't remove spaces */
+            display:flex; /*Check using inspect for further patterns. Same as inline flex for converting into inline.*/
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        I am a Box
+    </div>
+    <div class="box">Also a nice box</div>
+    <span>I am a Good</span>
+    <span>Boy</span>
+    
+</body>
+</html>

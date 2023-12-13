@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            display: grid;
+            width: 80vw;
+            height: 80vh;
+            /* We can name it also
+            grid-template-columns: [p]120px [s]100px [t]; 
+            and use this instead of numbers.*/
+            grid-template-columns: 1fr 2fr 1fr;
+            /* fr is the unit which takes the fraction of the available width. */
+            /* We can also write this */
+            /* grid-template-columns: repeat(3,1fr); */
+            /* OR */
+            /* grid-template-columns: repeat(3,minmax(100px,1fr)); */
+            /* This Ranges from min 100px to max 1fr. */
+            gap: 34px;
+            /* We can also do. */
+            row-gap: 33px;
+            column-gap: 10px;
+            justify-items: center;
+            align-items: center;
+            /* Hum justify-contents kyu use nahi karte kyunki vo independent html ke hisab se hoga jabki items se hum container ke contents ke hisab se karte hai. Isi karan se fr items se use hota hai aur sirf px contents se. */
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item2 {
+            align-self: start;
+            justify-self: end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item item2">2</div>
+        <div class="item">3</div>
+        <div class="item item4">4</div>
+        <div class="item">5</div>
+    </div>
+
+</body>
+
+</html>

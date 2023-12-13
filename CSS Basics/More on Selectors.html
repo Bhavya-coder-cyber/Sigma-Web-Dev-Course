@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS</title>
+    <style>
+        .box:first-child{
+            background-color: blue;
+        }
+        .box::first-line{
+            color: red;
+        }
+        .boxes *{
+            border: 2px solid black;
+        }
+        /* [data-color="primary"]{
+            margin-top: 45px;
+        } */
+        p,a,.box,[data-color="primary"]{
+            margin-top: 45px;
+        }
+        .boxes::before{
+            content: "My name is Bhavya Jain";
+            /* We can add elements dynamically by using CSS. */
+        }
+        .boxes::after{
+            content: "He is from Sigma Web Development Course";
+            color: blueviolet;
+        }
+        ::selection{
+            color: aqua;
+            background-color: brown;
+        }
+        input::placeholder{
+           color: red; 
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente temporibus maiores neque voluptatem? Qui ipsum quibusdam saepe beatae id enim soluta libero itaque dolorem? Qui ad perspiciatis voluptatum exercitationem assumenda, nisi magni neque aperiam.
+        </div>
+        <div class="box">Hello</div>
+        <div class="box">I am a Box.</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+</html>
