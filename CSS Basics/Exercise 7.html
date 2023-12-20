@@ -6,9 +6,66 @@
     <title>Exercise 7</title>
     <style>
         /* Create a ball dropping animation. */
+        .box{
+            position: relative;
+            height: 80vh;
+            width: 100vw;
+            background-color: blue;
+        }
+        .ball{
+            background-color: red;
+            width: 121px;
+            height: 121px;
+            border: 2px solid red;
+            /* border-radius: 70px; */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: ballanimation1 1s ease-out infinite alternate, ball2 3s linear infinite, ball3 3s linear infinite forwards;
+        }
+        @keyframes ballanimation1 {
+            from{
+                bottom: 0;
+            }
+            to {
+                bottom: 100%;
+            }
+            
+        }
+        @keyframes ball2 {
+            from{
+                left: 0;
+            }
+            to{
+                left: 100%;
+            }
+        }
+        @keyframes ball3 {
+            0%{
+                transform: rotate(60deg);
+            }
+            20%{
+                transform: rotate(120deg);
+            }
+            40%{
+                transform: rotate(180deg);
+            }
+            60%{
+                transform: rotate(240deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="box">
+        <div class="ball"></div>
+    </div>
     
 </body>
 </html>
