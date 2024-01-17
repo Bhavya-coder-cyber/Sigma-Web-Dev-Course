@@ -1,0 +1,11 @@
+console.log(document.body.childNodes)
+document.body.firstElementChild.children[0].style.color = "yellow"
+document.body.firstElementChild.children[0].style.backgroundColor = "red"
+document.body.firstElementChild.children[1].style.color = "white"
+document.body.firstElementChild.children[1].style.backgroundColor = "black"
+document.body.firstElementChild.children[2].style.backgroundColor = "green"
+document.body.firstElementChild.children[2].style.color = "pink"
+document.body.firstElementChild.children[3].style.backgroundColor = "orange"
+document.body.firstElementChild.children[3].style.color = "magenta"
+document.body.firstElementChild.children[4].style.color = "brown"
+document.body.firstElementChild.children[4].style.backgroundColor = "grey"
